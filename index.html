@@ -1,3 +1,21 @@
 <div id="app">
-  <div ui-view></div>
+  
+  <h1>Candidates</h1>
+  <label> Male:<input type = "checkbox" ng-model ="'male"></label>
+  <label> Female:<input type = "checkbox" ng-model ="'female"></label>
+  <div ng-controller = "listdata">
+    <div ng-repeat = "user in users">
+    <p>{{user.first_name}} {{user.last_name}}</p>
+    </div>
+
+  </div>
+  <h1>Add New Candidate</h1>
+  <div>
+    <label>First Name <input type ="text">
+      <label>Last Name <input type ="text"></br>
+        <label>Email <input type ="text"></br>
+          <label>Female <input type ="radio">
+            <label>Male <input type ="radio">
+              <input type = "submit" value = "Add">
+  </div>
 </div>
